@@ -14,8 +14,8 @@ class Caccounts extends CI_Controller {
         $this->auth->check_admin_auth();
         $this->template->current_menu = 'Caccounts';
 
-        if ($this->session->userdata('user_type') == '2') {
-            $this->session->set_userdata(array('error_message'=>display('you_are_not_access_this_part')));
+        if ($this->session->userdata('user_type') == '3' || $this->session->userdata('user_type') == '4') {
+            $this->session->set_userdata(array('error_message' => display('you_are_not_access_this_part')));
             redirect('Admin_dashboard');
         }
     }

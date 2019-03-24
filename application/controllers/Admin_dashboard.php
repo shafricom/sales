@@ -170,7 +170,7 @@ class Admin_dashboard extends CI_Controller {
 
     //Today All Report
     public function all_report() {
-        if ($this->session->userdata('user_type') == '2') {
+        if ($this->session->userdata('user_type') == '3') {
             $this->session->set_userdata(array('error_message' => display('you_are_not_access_this_part')));
             redirect('Admin_dashboard');
         }
@@ -197,7 +197,7 @@ class Admin_dashboard extends CI_Controller {
     #==============Todays_sales_report============#
 
     public function todays_sales_report() {
-        if ($this->session->userdata('user_type') == '2') {
+        if ($this->session->userdata('user_type') == '3') {
             $this->session->set_userdata(array('error_message' => display('you_are_not_access_this_part')));
             redirect('Admin_dashboard');
         }
@@ -243,7 +243,7 @@ class Admin_dashboard extends CI_Controller {
     #================todays_purchase_report========#
 
     public function todays_purchase_report() {
-        if ($this->session->userdata('user_type') == '2') {
+        if ($this->session->userdata('user_type') == '3') {
             $this->session->set_userdata(array('error_message' => display('you_are_not_access_this_part')));
             redirect('Admin_dashboard');
         }
@@ -289,7 +289,7 @@ class Admin_dashboard extends CI_Controller {
     #=============Total purchase_report_category_wise ===================#
 
     public function purchase_report_category_wise() {
-        if ($this->session->userdata('user_type') == '2') {
+        if ($this->session->userdata('user_type') == '3') {
             $this->session->set_userdata(array('error_message' => display('you_are_not_access_this_part')));
             redirect('Admin_dashboard');
         }
@@ -351,7 +351,7 @@ class Admin_dashboard extends CI_Controller {
 
 //    ============== sales report category wise =================
     public function sales_report_category_wise() {
-        if ($this->session->userdata('user_type') == '2') {
+        if ($this->session->userdata('user_type') == '3') {
             $this->session->set_userdata(array('error_message' => display('you_are_not_access_this_part')));
             redirect('Admin_dashboard');
         }
@@ -414,7 +414,7 @@ class Admin_dashboard extends CI_Controller {
     #=============Total profit report===================#
 
     public function total_profit_report() {
-        if ($this->session->userdata('user_type') == '2') {
+        if ($this->session->userdata('user_type') == '3') {
             $this->session->set_userdata(array('error_message' => display('you_are_not_access_this_part')));
             redirect('Admin_dashboard');
         }
@@ -461,7 +461,7 @@ class Admin_dashboard extends CI_Controller {
     #============Date wise sales report==============#
 
     public function retrieve_dateWise_SalesReports() {
-        if ($this->session->userdata('user_type') == '2') {
+        if ($this->session->userdata('user_type') == '3') {
             $this->session->set_userdata(array('error_message' => display('you_are_not_access_this_part')));
             redirect('Admin_dashboard');
         }
@@ -504,7 +504,7 @@ class Admin_dashboard extends CI_Controller {
     #==============Date wise purchase report=============#
 
     public function retrieve_dateWise_PurchaseReports() {
-        if ($this->session->userdata('user_type') == '2') {
+        if ($this->session->userdata('user_type') == '3') {
             $this->session->set_userdata(array('error_message' => display('you_are_not_access_this_part')));
             redirect('Admin_dashboard');
         }
@@ -550,7 +550,7 @@ class Admin_dashboard extends CI_Controller {
     #==============Product sales report date wise===========#
 
     public function product_sales_reports_date_wise() {
-        if ($this->session->userdata('user_type') == '2') {
+        if ($this->session->userdata('user_type') == '3') {
             $this->session->set_userdata(array('error_message' => display('you_are_not_access_this_part')));
             redirect('Admin_dashboard');
         }
@@ -597,7 +597,7 @@ class Admin_dashboard extends CI_Controller {
     #==============Date wise purchase report=============#
 
     public function retrieve_dateWise_profit_report() {
-        if ($this->session->userdata('user_type') == '2') {
+        if ($this->session->userdata('user_type') == '3') {
             $this->session->set_userdata(array('error_message' => display('you_are_not_access_this_part')));
             redirect('Admin_dashboard');
         }
@@ -648,7 +648,7 @@ class Admin_dashboard extends CI_Controller {
     #==============Product sales search reports============#
 
     public function product_sales_search_reports() {
-        if ($this->session->userdata('user_type') == '2') {
+        if ($this->session->userdata('user_type') == '3') {
             $this->session->set_userdata(array('error_message' => display('you_are_not_access_this_part')));
             redirect('Admin_dashboard');
         }

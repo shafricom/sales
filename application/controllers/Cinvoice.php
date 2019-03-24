@@ -12,6 +12,11 @@ class Cinvoice extends CI_Controller {
     public function index() {
         $CI = & get_instance();
         $CI->auth->check_admin_auth();
+		if ($this->session->userdata('user_type') == '3') {
+            $this->session->set_userdata(array('error_message' => display('you_are_not_access_this_part')));
+            redirect('Admin_dashboard');
+        }
+    
         $CI->load->library('linvoice');
         $content = $CI->linvoice->invoice_add_form();
         $this->template->full_admin_html_view($content);

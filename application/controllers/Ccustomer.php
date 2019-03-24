@@ -14,6 +14,11 @@ class Ccustomer extends CI_Controller {
         $this->load->library('session');
         $this->load->model('Customers');
         $this->auth->check_admin_auth();
+		if ($this->session->userdata('user_type') == '2' || $this->session->userdata('user_type') == '3') {
+            $this->session->set_userdata(array('error_message' => display('you_are_not_access_this_part')));
+            redirect('Admin_dashboard');
+        }
+    
     }
 
     //Default loading for Customer System.

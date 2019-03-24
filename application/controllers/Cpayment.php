@@ -21,7 +21,13 @@ class Cpayment extends CI_Controller {
         $this->load->model('Web_settings');
         $this->auth->check_admin_auth();
         $this->template->current_menu = 'Payment';
+		
+		if ($this->session->userdata('user_type') == '3' || $this->session->userdata('user_type') == '4') {
+            $this->session->set_userdata(array('error_message' => display('you_are_not_access_this_part')));
+            redirect('Admin_dashboard');
+        }
     }
+    
 
     public function index() {
         $content = $this->lpayment->payement_form();
